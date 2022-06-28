@@ -1,5 +1,6 @@
 package com.quark.admin.controller;
 
+import com.quark.admin.utils.PasswordHelper;
 import com.quark.common.entity.AdminUser;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -29,6 +30,19 @@ public class PageController {
     public String login() {
         return "login";
     }
+
+
+    @RequestMapping(value = "/myadd", method = RequestMethod.GET)
+    public void myadd() {
+        PasswordHelper passwordHelper = new PasswordHelper();
+        AdminUser adminUser =  new AdminUser();
+        adminUser.setId(88);
+        adminUser.setEnable(1);
+        adminUser.setUsername("root");
+        adminUser.setPassword("123456");
+    }
+
+
 
     /**
      * 用户登录

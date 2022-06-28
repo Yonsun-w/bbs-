@@ -56,15 +56,15 @@ public class ShiroConfig {
     }
 
 
-    /**
-     * thymeleaf里使用shiro的标签的bean
-     *
-     * @return
-     */
-    @Bean
-    public ShiroDialect shiroDialect() {
-        return new ShiroDialect();
-    }
+//    /**
+//     * thymeleaf里使用shiro的标签的bean
+//     *
+//     * @return
+////     */
+//    @Bean
+//    public ShiroDialect shiroDialect() {
+//        return new ShiroDialect();
+//    }
 
     /**
      * 处理拦截资源文件问题。
